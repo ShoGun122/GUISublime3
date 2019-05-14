@@ -24,11 +24,21 @@ public class Main
 		JTextField tags = new JTextField (100);
 		JTextField location = new JTextField (100);
 		JPanel firstPanel = new JPanel();
-		mianFrame.setContentPane(firstPanel);
+		JLabel pathText = new JLabel("Path: ");
+		JLabel authorText = new JLabel("Author: ");
+		JLabel dateText = new JLabel("Date:");
+		JLabel tagsText = new JLabel("Tags:");
+		JLabel locationText = new JLabel("Location:");
+		mainFrame.setContentPane(firstPanel);
+		firstPanel.add(pathText);
 		firstPanel.add(path);
+		firstPanel.add(authorText);
 		firstPanel.add(author);
+		firstPanel.add(dateText);
 		firstPanel.add(date);
+		firstPanel.add(locationText);
 		firstPanel.add(location);
+		firstPanel.add(tagsText);
 		firstPanel.add(tags);
 		mainFrame.setVisible(true);
 		
