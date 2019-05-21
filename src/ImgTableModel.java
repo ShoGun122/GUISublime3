@@ -1,8 +1,10 @@
+import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 
 public class ImgTableModel extends AbstractTableModel {
     public ImgTableModel(String[] columns) {
     }
+    private JTable table ;
 
     @Override
     public int getRowCount() {
@@ -14,9 +16,8 @@ public class ImgTableModel extends AbstractTableModel {
         return 0;
     }
 
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return null;
+    public Object getValueAt(JTable table,int rowIndex, int columnIndex) {
+        return table.getValueAt(rowIndex,columnIndex);
     }
 
 }

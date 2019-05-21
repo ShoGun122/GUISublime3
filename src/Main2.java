@@ -55,7 +55,11 @@ public class Main2 {
         panel.add(location);
         panel.add(scrollPane);
         JButton save = new JButton("save");
+        JButton export = new JButton("Export to txt");
         panel.add(save);
+        panel.add(export);
+        JLabel test = new JLabel();
+        panel.add(test);
         mainFrame.setContentPane(panel);
         mainFrame.setVisible(true);
         //JScrollPane allScrollPane = new ScrollPane();
@@ -64,6 +68,12 @@ public class Main2 {
             public void actionPerformed(ActionEvent e) {
                 String newRow [] = {path.getText(),author.getText(),date.getText(),location.getText(),tags.getText()};
                 model.addRow(newRow);
+            }
+        });
+        export.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //test.setText(table.getValueAt(3,3));
             }
         });
 
